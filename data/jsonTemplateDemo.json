@@ -1,0 +1,47 @@
+[
+  {
+    "matricule": 20123456,
+    "events": [
+      {
+        "titre": "First Activity",
+        "date": "02-02-2024",
+        "debut": "10:15",
+        "fin": "11:15",
+        "lieu": "Room 7"
+      },
+      {
+        "titre": "Second Activity",
+        "date": "05-04-2024",
+        "debut": "11:30",
+        "fin": "12:30",
+        "lieu": "Room 22"
+      },
+      {
+        "titre": "Third Activity",
+        "date": "19-04-2024",
+        "debut": "13:30",
+        "fin": "15:30",
+        "lieu": "Room 40"
+      }
+    ]
+  },
+  {
+    "matricule": 20123789,
+    "events": [
+      {
+        "titre": "Event 1",
+        "date": "25-03-2024",
+        "debut": "13:30",
+        "fin": "15:30",
+        "lieu": "Practical Lab"
+      },
+      {
+        "titre": "Event 2",
+        "date": "08-04-2024",
+        "debut": "13:30",
+        "fin": "17:00",
+        "lieu": "Lecture Room"
+      }
+    ]
+  }
+]
