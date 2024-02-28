@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MGF</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/button.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<div class="mobile-menu">
+    <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+</div>
+<nav>
+    <div class="menu-container">
+        <a href="../index.html" class="logo">
+            <img src="../data/medgroupfinder_logo.png" alt="logo">
+
+        </a>
+        <a href="../index.html" id="text-logo">MedGroupFinder</a>
+        <ul class="menu-listing">
+            <li><a href="../index.html">Finder</a></li>
+            <li><a href="howtouse.html">Mode d'emploi</a></li>
+            <li><a href="about.html">A propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="contact">
+    <h1>Contacte moi</h1>
+    <p>En cas de bug, de proposition d'ajout, de difficulté à te servir de l'outil ou de proposition de collaboration,
+    utilise le formulaire ci-dessous pour me contacter.</p>
+    <form id="form">
+        <div class="field">
+            <input type="text" name="from_name" placeholder="Prénom / Pseudo" id="from_name" required>
+        </div>
+        <div class="field">
+            <input type="text" name="reply_to" placeholder="Ton e-mail" id="reply_to" required>
+        </div>
+        <div class="field">
+            <textarea type="text" name="message" placeholder="Ton message" id="message" required></textarea>
+        </div>
+
+        <div class="field" >
+        <input type="submit" id="button" value="Envoyer">
+        </div>
+    </form>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('arReThT1nfUSuObHf')
+    </script>
+</section>
+
+<script>
+    function toggler() {
+        const icon = document.querySelector("#toggler");
+        const menu = document.querySelector("nav");
+        const menuContainer = document.querySelector(".menu-container");
+        if (icon.innerHTML == "menu") {
+            icon.innerHTML = "close";
+            menu.style.transform = "translateX(0%)";
+            menuContainer.style.height="100vh";
+            
+        } else {
+            icon.innerHTML = "menu";
+            menu.style.transform = "translateX(-100%)";
+            menuContainer.style.height="0vh";
+        }
+    }
+</script>
+<script type="module" src="../script/contact.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

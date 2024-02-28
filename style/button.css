@@ -1,0 +1,58 @@
+
+.button {
+    display: flex;
+    height: 50px;
+    padding: 0;
+    background: #1a3c92;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addCalendar button{
+    display: block;
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px
+}
+
+.button:hover {
+    background: #2657d2;
+}
+
+.button:active {
+    background: #5680e7;
+}
+
+.button-text{
+    display: inline-flex;
+    flex-grow: 1; /* Ajouter cette ligne */
+    align-items: center;
+
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+}
+
+.button-icon {
+
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 3em;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.download-button .button-text{
+    transform:translateY(-8px); /* Correction temporaire du décalage de span du texte des boutons de téléchargement*/
+}
+

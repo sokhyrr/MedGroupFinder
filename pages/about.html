@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos - MGF</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/button.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<div class="mobile-menu">
+    <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+</div>
+<nav>
+    <div class="menu-container">
+        <a href="../index.html" class="logo">
+            <img src="../data/medgroupfinder_logo.png" alt="logo">
+
+        </a>
+        <a href="../index.html" id="text-logo">MedGroupFinder</a>
+        <ul class="menu-listing">
+            <li><a href="../index.html">Finder</a></li>
+            <li><a href="howtouse.html">Mode d'emploi</a></li>
+            <li><a href="about.html">A propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="about-container">
+<section class="about">
+    <h1>Histoire du site...</h1>
+    <p>L'idée m'est venue à l'aéroport juste avant la rentrée du Q6. Nous venions de recevoir dans les nouvelles de myULiège l'ensemble
+        des PDF contenant les dates des différents TP, stages et activités du quadrimestre. Comme j'avais du temps à tuer
+    (les retards avec RyanAir...) j'ai décidé de tout reporter proprement dans mon agenda aux bonnes dates et heures et en indiquant
+    à chaque fois les lieux dans les détails de Google Agenda.
+    </p>
+    <p>
+
+        Au fur et à mesure de la réalisation de cette tâche très rébarbative,
+        je me suis rendu compte qu'elle devait être simplement automatisable en toute théorie... C'est comme ça que j'ai commencé à penser
+        la structure de la base de données qui comprendrait pour chaque matricule l'ensemble des activités ainsi que leurs données (lieu, date, heure, etc.).
+        Cette dernière, qui serait créée à partir de manipulations des fichiers PDF que l'on nous a fait parvenir, serait très propice
+        à l'exportation de ces données dans diverses utilisations telles que l'affichage d'un tableau ou bien même le téléchargement
+        d'un calendrier numérique.
+    </p>
+    <p>
+        J'ai laissé cette idée mariner quelque temps avant de développer ce site web. Après avoir fait
+        tester les premiers prototypes à mes amis, j'ai constaté que leur enthousiasme confirmait la réelle utilité de ce projet.
+        J'espère que cette première idée pourra servir de base à un changement futur drastique du mode de communication des dates ou
+        groupes d'activités individuelles pour le plus grand confort de chacun.
+    </p>
+
+</section>
+<section class="about">
+    <h1>En ce qui me concerne</h1>
+    <p>
+        Je suis étudiant en BAC3 Médecine et passionné notamment d'informatique depuis de nombreuses années.
+        Je compte réaliser de nouveaux projets qui ont pour visée un meilleur confort des étudiants dans leur quotidien universitaire,
+        notamment une plateforme communautaire pour s'exercer aux QCM, intégrant les modalités d'évaluation de notre faculté.
+    </p>
+</section>
+<section class="about">
+    <h1>Pour les curieux du dev' </h1>
+    <p>Ce site a été réalisé en pur HTML/CSS/JS en utilisant notamment une bibliothèque pour la conversion du tableau HTML en image (html2canvas).
+    Le calendrier à exporter utilise le format de données iCalendar (.ics) qui permet une compatibilité multi-plateforme et un respect des fuseaux horaires.
+        La base de données utilisée est en JSON. Cependant, le chemin pour y arriver est long : les tableaux Excel sont fusionnés et formatés, convertis
+        en CSV, puis en JSON et enfin agencés par un script fait maison ! Le logo est généré par une IA.
+    </p>
+</section>
+</div>
+<script>
+    function toggler() {
+        const icon = document.querySelector("#toggler");
+        const menu = document.querySelector("nav");
+        const menuContainer = document.querySelector(".menu-container");
+        if (icon.innerHTML == "menu") {
+            icon.innerHTML = "close";
+            menu.style.transform = "translateX(0%)";
+            menuContainer.style.height="100vh";
+            
+        } else {
+            icon.innerHTML = "menu";
+            menu.style.transform = "translateX(-100%)";
+            menuContainer.style.height="0vh";
+        }
+    }
+</script>
+</body>
+</html>

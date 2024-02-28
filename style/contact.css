@@ -1,0 +1,71 @@
+body {
+    font-size: 1.1rem;
+    text-align:justify;
+    font-family:"Poppins", sans-serif;
+}
+
+.contact {
+    padding : 80px 25%;
+}
+
+.contact h1{
+    border-bottom: #1a3c92 solid 1px;
+}
+.contact p{
+    padding:20px 0;
+    font-size: 1.3rem;
+    text-align:justify;
+}
+
+.field, #button  {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#from_name, #reply_to{
+    text-align:center;
+    padding:10px 5px;
+    width: auto;
+    font-size:1.2em;
+    border-radius:10px;
+}
+
+#message {
+    text-align: justify;
+    padding:10px 5px;
+    width:auto;
+    height:10em;
+    font-size:1.2em;
+    border-radius:10px;
+}
+
+
+::placeholder {
+    text-align: center;
+}
+
+#button {
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    color:#FFF;
+    background: #1a3c92;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button:hover {
+    background: #2657d2;
+}
+
+#button:active {
+    background: #5680e7;
+}
