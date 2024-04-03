@@ -1,58 +1,86 @@
+/* Variables de couleurs */
+
+:root {
+    --btn:#1a3c92;
+    --btn-hover:#2657d2 ;
+    --btn-active: #5680e7;
+    --btn-transparent: rgba(38,87,210, 0.1);
+    --btn-dl:#1a3c92;
+    --btn-dl-hover:#2657d2 ;
+    --btn-dl-active: #5680e7;
+}
 
 .button {
-    display: flex;
-    height: 50px;
-    padding: 0;
-    background: #1a3c92;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#addCalendar button{
-    display: block;
-    width:auto;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:10px
-}
-
-.button:hover {
-    background: #2657d2;
-}
-
-.button:active {
-    background: #5680e7;
-}
-
-.button-text{
     display: inline-flex;
-    flex-grow: 1; /* Ajouter cette ligne */
-    align-items: center;
-
-    padding: 0 24px;
-    color: #fff;
-    height: 100%;
-}
-
-.button-icon {
-
-    display: inline-flex;
-    flex-grow: 1;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    width: 3em;
-    font-size: 1.5em;
-    background: rgba(0, 0, 0, 0.08);
-    height: 100%;
+    padding: 0.6rem 1rem;
+    margin:5px 0;
+    gap: 8px;
+
+    background-color: var(--btn);
+    border-radius: 5px;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    font-size:1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border:none;
+    transition : background-color 0.3s ease;
+
 }
 
-.download-button .button-text{
-    transform:translateY(-8px); /* Correction temporaire du décalage de span du texte des boutons de téléchargement*/
+/* Boutons classiques */
+
+.button-classic {
+    background-color: var(--btn);
+    color:white;
 }
 
+.button-classic:hover {
+    background-color: var(--btn-hover);
+}
+
+.button-classic:active {
+    background-color:var(--btn-active);
+}
+
+/* Boutons de téléchargement */
+
+.button-download {
+    background-color: var(--btn-dl);
+    color:white;
+}
+
+.button-download:hover {
+    background-color: var(--btn-dl-hover);
+}
+
+.button-download:active {
+    background-color:var(--btn-dl-active);
+}
+
+.button-matricule {
+    background-color: transparent;
+    border: var(--btn-hover) 2px solid;
+    color:var(--btn);
+    border-radius: 20px;
+}
+
+.button-matricule:hover {
+    background-color:var(--btn-transparent);
+}
+
+.button-matricule-storage {
+    background-color: transparent;
+    border: none;
+    color:black;
+    padding:10px;
+    margin:0;
+    cursor:pointer;
+}
+
+.button-matricule-storage:disabled {
+    color:lightgray;
+    cursor:default;
+}

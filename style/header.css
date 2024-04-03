@@ -1,0 +1,100 @@
+
+header {
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:50px;
+    padding-bottom:15px;
+    border-bottom: #1a3c92 solid;
+}
+
+.inline-radio {
+    display:inline-flex;
+    overflow:hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+}
+
+.inline-radio input {
+    display: none;
+}
+.inline-radio label {
+    padding:8px 14px;
+    font-size: 14px;
+    color:white;
+    background:#2657d2;
+    cursor:pointer;
+    transition : background 0.1s;
+}
+
+.inline-radio label:not(:last-of-type) {
+    border-right: 1px solid #2657d2;
+}
+.inline-radio input:checked + label {
+    background: #1a3c92;
+}
+
+#mode-choice-container, #strictness-container {
+    margin-bottom:20px;
+}
+
+#solo-form, #friend-form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+#solo-form label, #friend-form p {
+    text-align:center;
+    margin: 5px 0;
+}
+header ol {
+    margin-bottom:20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom:15px;
+}
+
+#solo-input{
+    text-align:center;
+    padding:10px;
+    margin:10px 0;
+    width: 100px;
+    font-size:1.5em;
+    border-radius:10px;
+}
+
+.friend-input{
+    text-align:center;
+    padding:5px 0;
+    margin:5px 0;
+    width: 100px;
+    font-size:1.2em;
+    border-radius:10px;
+}
+
+#friend-number-container {
+    margin:5px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:50%
+}
+
+#friend-number-container button {
+    background : white;
+    border:none;
+    font-size: 1.5rem;
+
+}
+
+#friend-number-span {
+    padding:0 5px;
+}
+
+#friend-number-container button:not(:disabled):hover {
+    color: #555;
+    cursor: pointer;
+}

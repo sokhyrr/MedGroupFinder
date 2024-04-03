@@ -19,7 +19,7 @@
 <body>
 
 <div class="mobile-menu">
-    <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+    <span class="material-symbols-outlined" id="toggler">menu</span>
 </div>
 <nav>
     <div class="menu-container">
@@ -65,23 +65,7 @@
     </script>
 </section>
 
-<script>
-    function toggler() {
-        const icon = document.querySelector("#toggler");
-        const menu = document.querySelector("nav");
-        const menuContainer = document.querySelector(".menu-container");
-        if (icon.innerHTML == "menu") {
-            icon.innerHTML = "close";
-            menu.style.transform = "translateX(0%)";
-            menuContainer.style.height="100vh";
-            
-        } else {
-            icon.innerHTML = "menu";
-            menu.style.transform = "translateX(-100%)";
-            menuContainer.style.height="0vh";
-        }
-    }
-</script>
+<script type="module" src="../script/toggler.js"></script>
 <script type="module" src="../script/contact.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>

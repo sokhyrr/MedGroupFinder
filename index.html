@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedGroupFinder</title>
     <link rel="stylesheet" href="style/style.css">
+    <meta theme-color="#1a3c92">
+    <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/button.css">
     <link rel="stylesheet" href="style/table.css">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -15,10 +17,11 @@
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
+    <script src="script/friendmode.js" defer></script>
 </head>
 <body>
 <div class="mobile-menu">
-    <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+    <span class="material-symbols-outlined" id="toggler">menu</span>
 </div>
 <nav>
     <div class="menu-container">
@@ -35,41 +38,77 @@
         </ul>
     </div>
 </nav>
-
 <header>
-    <h1>MedGroupFinder : Trouve mes TP !</h1>
-    <form id="matriculeForm">
-        <label for="matriculeInput">Saisis ton matricule (6 ou 7 chiffres)</label>
-        <input type="number" id="matriculeInput" placeholder="213630" required>
-        <button type="submit" class="button"><span class="button-text">Trouver mes TP</span><span class="button-icon"><ion-icon name="search-outline"></ion-icon></span></button>
-    </form>
-</header>
+    <h1>MedGroupFinder : Trouve mes Activités !</h1>
+    <div id="mode-choice-container" class="inline-radio">
+        <input type="radio" id="solo-mode" name="mode" value="solo-mode" checked>
+        <label for="solo-mode">Solo Mode</label><br>
 
-<section id="divEventsContainer"></section>
-<section id="addCalendar"></section>
+        <input type="radio" id="friend-mode" name="mode" value="friend-mode">
+        <label for="friend-mode">Friend Mode</label><br>
+    </div>
+
+    <div id="solo-mode-container">
+        <form id="solo-form">
+            <label for="solo-input">Saisis ton matricule <br> (6 ou 7 chiffres, sans le "s")</label>
+            <span id="matriculeInputSpan">
+                <input type="number" id="solo-input" required>
+                <label title="Sauvegarde ton matricule pour la prochaine fois" id="add-matricule-container">
+                </label>
+            </span>
+
+            <button class="button button-classic" type="submit">
+                <span class="button-label">Trouver mes activités</span>
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </form>
+        <div id="saved-matricule-container"></div>
+    </div>
+    <div id="friend-mode-container">
+        <form id="friend-form">
+            <p>Saisis les différents matricules <br> (6 ou 7 chiffres, sans le "s")</p>
+            <div id="friend-number-container">Amis :
+                <button type="button" id="remove-friend-button">
+                    <ion-icon name="remove-circle-outline"></ion-icon>
+                </button>
+                <span id="friend-number-span">2</span>
+                <button type="button" id="add-friend-button">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+            </div>
+            <ol>
+                <li><input type="number" class="friend-input" required><input type="color" value="#00a7e1"></li>
+                <li><input type="number" class="friend-input" required><input type="color" value="#1100ff"></li>
+            </ol>
+            <div id="strictness-container" class="inline-radio"> <!-- Cette div n'apparaît qu'à partir du 3e ami -->
+                <input type="radio" id="combinations-activities" name="strictness" value="combinations">
+                <label for="combinations-activities">Au moins 2 en commun</label><br>
+                <input type="radio" id="common-to-everybody-activities" name="strictness" value="commonToEverybody"
+                       checked>
+                <label for="common-to-everybody-activities">Commun à tous</label><br>
+            </div>
+            <button type="submit" class="button"><span class="button-text">Trouver nos activités communes</span><span
+                    class="button-icon"><ion-icon
+                    name="search-outline" role="img" class="md hydrated"></ion-icon></span></button>
+        </form>
+    </div>
+</header>
+<section id="calendar-section">
+    <div id="alert-container"></div>
+    <div id="combination-container"></div>
+    <div id="calendar-container"></div>
+    <div id="download-container"></div>
+</section>
+
 
 <footer>
-<p>Remplis <a href="https://forms.gle/ZiEk4sUWPG3SGWeF6">ce court formulaire</a> sur l'attribution actuelle de l'horaire individuel, </br> de l'utilisation de MedGroupFinder, et des alternatives futures de communication des groupes !</p>
+    <p>Remplis <a href="https://forms.gle/ZiEk4sUWPG3SGWeF6">ce court formulaire</a> sur l'attribution actuelle de
+        l'horaire individuel, <br> de l'utilisation de MedGroupFinder, et des alternatives futures de communication des
+        groupes !</p>
 </footer>
-<script>
-    function toggler() {
-        const icon = document.querySelector("#toggler");
-        const menu = document.querySelector("nav");
-        const menuContainer = document.querySelector(".menu-container");
-        if (icon.innerHTML == "menu") {
-            icon.innerHTML = "close";
-            menu.style.transform = "translateX(0%)";
-            menuContainer.style.height="100vh";
-            
-        } else {
-            icon.innerHTML = "menu";
-            menu.style.transform = "translateX(-100%)";
-            menuContainer.style.height="0vh";
-        }
-    }
-</script>
+<script type="module" src="script/toggler.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-<script type="module" src="script/ical.js"></script>
+<script type="module" src="script/calendar/ical.js"></script>
 <script type="module" src="script/main.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script src="script/lib/html2canvas.min.js"></script>

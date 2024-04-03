@@ -1,0 +1,189 @@
+Received: from AS8P250MB0008.EURP250.PROD.OUTLOOK.COM (2603:10a6:20b:35b::21)
+ by DU2P250MB0128.EURP250.PROD.OUTLOOK.COM with HTTPS; Tue, 12 Mar 2024
+ 13:40:21 +0000
+Received: from DU6P191CA0015.EURP191.PROD.OUTLOOK.COM (2603:10a6:10:540::16)
+ by AS8P250MB0008.EURP250.PROD.OUTLOOK.COM (2603:10a6:20b:35b::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7362.36; Tue, 12 Mar
+ 2024 13:40:20 +0000
+Received: from DU2PEPF00028D0B.eurprd03.prod.outlook.com
+ (2603:10a6:10:540:cafe::c1) by DU6P191CA0015.outlook.office365.com
+ (2603:10a6:10:540::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7362.36 via Frontend
+ Transport; Tue, 12 Mar 2024 13:40:20 +0000
+Authentication-Results: spf=pass (sender IP is 139.165.32.111)
+ smtp.mailfrom=uliege.be; dkim=pass (signature was verified)
+ header.d=uliege.be;dmarc=pass action=none header.from=uliege.be;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of uliege.be designates
+ 139.165.32.111 as permitted sender) receiver=protection.outlook.com;
+ client-ip=139.165.32.111; helo=serv108.segi.ulg.ac.be; pr=C
+Received: from serv108.segi.ulg.ac.be (139.165.32.111) by
+ DU2PEPF00028D0B.mail.protection.outlook.com (10.167.242.171) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7386.12 via Frontend Transport; Tue, 12 Mar 2024 13:40:18 +0000
+Received: from poledev-was-prod05 (serv777.segi.ulg.ac.be [139.165.53.127])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by serv108.segi.ulg.ac.be (Postfix) with ESMTPSA id 33D73200C978
+	for <all@student.uliege.be>; Tue, 12 Mar 2024 14:40:13 +0100 (CET)
+DKIM-Filter: OpenDKIM Filter v2.11.0 serv108.segi.ulg.ac.be 33D73200C978
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uliege.be;
+	s=ulg20190529; t=1710250813;
+	bh=DuxzsKd43EKsKFDdEyMln2vHnmZqg7PGdnmy2o4BqMQ=;
+	h=Date:From:To:Subject:From;
+	b=fK+6YBG6tWLKRe19BtEJ31Rbtqmi9LAfSFX94ZLyOmhdV6Y18//wWjgcVMEudvBpj
+	 8ewoXDBse/Z7cPX3av9Tcv0arXXcCvy3ELUKao30r6i/FvsQ/E93Sc9kKnn6RZdrtn
+	 llraofAdwkAHH9qdGho23luSRXbixsRSqZ9QjDVocB2tJ4Ac85DOl+PtRpYpj20Ig+
+	 7UMQ2HY/ezzh7Vs+8i1DKsxzRm/rCV61H+fOdy4Sk1rqJhWs/61QJHPt+tLE6SKnNI
+	 cO+Rwfsv8rxDBHDAEy/BbY0R8V9XZYuQMBwQU2nCG2a10oCXgKKdTniFNKh+umgsnV
+	 bQLwVTol5Naxg==
+Date: Tue, 12 Mar 2024 14:40:13 +0100 (CET)
+From: =?UTF-8?Q?LUCENTE_V=C3=A9ronique?= <vlucente@uliege.be>
+To: all@student.uliege.be
+Message-ID: <-380110304.4548.1710250813208@serv777.segi.ulg.ac.be>
+Subject: ATTENTION MODIFICATION ARC MEDGEN 19/04 groupe A & B
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Return-Path: vlucente@uliege.be
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Mar 2024 13:40:18.7792
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1fb88fc4-ecdf-4426-b529-08dc4299f502
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 62e13b84-1960-4562-8c7f-72472951da8f:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DU2PEPF00028D0B:EE_|AS8P250MB0008:EE_|DU2P250MB0128:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DU2PEPF00028D0B.eurprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 1fb88fc4-ecdf-4426-b529-08dc4299f502
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-BypassFocusedInbox: true
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:139.165.32.111;CTRY:BE;LANG:fr;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:serv108.segi.ulg.ac.be;PTR:ErrorRetry;CAT:NONE;SFS:(13230031);DIR:INB;
+X-MS-Exchange-ABP-GUID: 1462ff8f-1dad-44df-98ab-aa0548a8c696
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Mar 2024 13:40:18.6855
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1fb88fc4-ecdf-4426-b529-08dc4299f502
+X-MS-Exchange-CrossTenant-Id: 62e13b84-1960-4562-8c7f-72472951da8f
+X-MS-Exchange-CrossTenant-AuthSource:
+ DU2PEPF00028D0B.eurprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AS8P250MB0008
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6445085
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7362.031
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TVFHMWErcFp3cWR4TXArVUpKdFBPdHVzeDlBK25xZ1AzN2ZVcFhoMlFhRFRK?=
+ =?utf-8?B?VUxSU21hNlplbHIwemtKdWQ5MzVMNzd4VHNpRDViUnpTbVg1dEo2ZGh6MDhW?=
+ =?utf-8?B?TVBOb3BwVjA4TEtvdkRzYnk1aUMrTEcvUENKNmN2VVlHcHhhUktRdzRLU04y?=
+ =?utf-8?B?eUZ1cHZGTW9meFIyRlZDRFUxbVJtZ1h4Z1lKUW1xNk5IT0FSazE2MmRJUUZM?=
+ =?utf-8?B?ekh2YTVrWng4NWgwRXRUUDJHRFFNVDBLUk5yU1VkTkt0azdSM2N6UFp3anRy?=
+ =?utf-8?B?aG5wS3kwdHd2aVgwbWp5ai9wdXJsUUYxQTRFVHpKKzhNb3ZDUzIxS2pyUDZi?=
+ =?utf-8?B?LzVNQnhKWUNVbmc2SEpOUE1Kb0dWU0ZnekpXQjIxOWtvU1VacXd5UzgxTE95?=
+ =?utf-8?B?VWpDcjQxbW9LbXJvWjcvOStsTm1kU01EK2d6L0k3cmpkbUVsdEhlWDVxSnl5?=
+ =?utf-8?B?Mk53WCtKbFJjU2xZc1pkWFZXelhkRnA2bmtvWEN6d3JvMzZxdEJhZ1NaTHBY?=
+ =?utf-8?B?VkRBNm1MUTFaVTRhaCtTZ3FQZDZxWnV5QzNjMjREUnBWVGFsZklwTjlob1Bm?=
+ =?utf-8?B?WVdpajF6RkE4b0xpNkwrTFRQQnIvZzJoV21HYXV6eWFjMncrVStvaHNITThs?=
+ =?utf-8?B?dDNYSkJqNk5pSjVXWkV2eTdsL3dxV1pOK1NQLy9WRzFaM0RYSmhoVGVZbHJw?=
+ =?utf-8?B?RmhYWU1Mdm5ZNnkrSzBRSzRQa0NMUkhMenFqRzBxUUZkaHg3UVFzWFB6cTNy?=
+ =?utf-8?B?NUxkamlOdW55OU5YZFFxcjZoUURFMzRDQ3NtMy9rL1pTWlY1MGpRRkRQb0dP?=
+ =?utf-8?B?UmxRT1hRZGRjdEtTSXBsWHFzYVNYN0NFVUt2N2pzYmlXWVgxSVhON1VmQXNH?=
+ =?utf-8?B?UHRiVVIzV2IvcUJxclZsaFh5TTVyUk15UmFzTDhib0RpN1hWRHVhUG1ucU1Q?=
+ =?utf-8?B?Ri9oOEtCQVRUSWRsbGU4SGROQ2FSWWJyd0p4UzNBZDFkV1JJSmVLWGV4RDBR?=
+ =?utf-8?B?Rkg4L05YOGZGTXZjOWxFbmZuNk5ESVdkeC9EVE9LRUZoM3ZvSERVVzlTejRY?=
+ =?utf-8?B?MG9oV3hNcHVPdVdPWHFxcHUybXMwWXQ2RHFKdXdoWEpzc3poUm5DajlGd3I0?=
+ =?utf-8?B?b2V6NUFKVWwxYnhJY08wOVpqVTJnT01kTHFoWGxxUElydWV6Q1c5NzVwYVhz?=
+ =?utf-8?B?M2ExNFhBcVJJdVg3OFo1VEdMelVGekd3eVVKamkxM09YT2JzbjdsL2RLWkYy?=
+ =?utf-8?B?bXFCT3RjYm5KeUw4cmxzUlVtTE8yYnp0dVFqbnNwKzdxN1c3NitjSk10aGFo?=
+ =?utf-8?B?MG82K3ZiWVg2cXVNQkhtUEdjbmw1RTNHWkVuRDRzWEpJcktELytCSXpaRUZ1?=
+ =?utf-8?B?MnNDSUxjTXpBN3BRK1NwZ0xSaG9jaDRsTXdyNFZkeEZhVldFcnM0N1pXM0k3?=
+ =?utf-8?B?NUM5VGF6TmpxQnN4QVNpdDY2SkI2NWVvMlRucUJBPT0=?=
+MIME-Version: 1.0
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">Ce=
+ message a =C3=A9t=C3=A9 envoy=C3=A9 aux =C3=A9tudiants suivant le cours : =
+PATH0136-1
+Int=C3=A9gration des connaissances y compris apprentissage au raisonnement =
+clinique et diagnostique I=20
+
+Message :
+<p>Bonjour,</p>
+<p>M. L. Pezzin =C3=A9tant absent, vous serez r=C3=A9parti comme suit:</p>
+<table style=3D"width: 273px; height: 126px;" width=3D"246">
+<tbody>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20213497 salle 14</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20205476 Salle 15</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20176065 Grand bureau m=C3=A9de=
+cine g=C3=A9n=C3=A9rale</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20206266 salle 1</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20191659 salle 2</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20174938 salle 4</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20214935 salle 5</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20214713 salle 6</td>
+</tr>
+<tr style=3D"height: 14px;">
+<td style=3D"width: 264.6px; height: 14px;">20216137 salle 7</td>
+</tr>
+</tbody>
+</table>
+<table style=3D"width: 265px;" width=3D"246">
+<tbody>
+<tr>
+<td style=3D"width: 256.6px;">20211241 salle 14</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20211247 salle 15</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20205727 grand bureau m=C3=A9decine g=C3=A9n=
+=C3=A9rale</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20205864 salle 1</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20196065 salle 2</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20185764 salle 4</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20192353 salle 5</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20204888 salle 6</td>
+</tr>
+<tr>
+<td style=3D"width: 256.6px;">20211273 salle 7</td>
+</tr>
+</tbody>
+</table>
+<p>Merci de bien tenir compte de ce changement.</p>
+<p>Bien =C3=A0 vous,</p>
+<p>Lucente V=C3=A9ronique</p><br>
